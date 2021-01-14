@@ -33,7 +33,9 @@ export default {
     })
 
     eventBus.$on('beer-to-save', (beer) => {
-      this.favourites.push(beer)
+      if(!this.favourites.includes(beer)){
+        this.favourites.push(beer)
+      }
     })
   },
   methods: {
