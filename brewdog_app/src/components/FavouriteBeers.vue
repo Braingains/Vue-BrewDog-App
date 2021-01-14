@@ -1,17 +1,24 @@
 <template>
     <div>
-        <ul v-for="(beer, index) in favourites" :beer= 'beer' :key= 'index'> </ul>
+        <ul> 
+            <favourite-beers-item v-for="(beer, index) in favouriteBeers" :beer= 'beer' :key= 'index'>
+            </favourite-beers-item>
+         </ul>
         
     </div>
 </template>
 
 <script>
+import FavouriteBeersItem from './FavouriteBeersItem.vue'
 import { eventBus } from '../main.js'
 export default {
     name: 'favourite-beers',
-    props: ['favourites'],
+    props: ['favouriteBeers'],
     methods: {
 
+    },
+    components: {
+        'favourite-beers-item' : FavouriteBeersItem
     }
 
 }

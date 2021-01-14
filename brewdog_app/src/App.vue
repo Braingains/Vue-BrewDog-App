@@ -2,7 +2,7 @@
     <div class="main-container">
       <beers-list :beers='beers'> </beers-list>
       <beer-detail :beer='selectedBeer'> </beer-detail>
-      <favourite-beers :beer='favourites'> </favourite-beers>
+      <favourite-beers :favouriteBeers='favourites'> </favourite-beers>
     </div>
 </template>
 
