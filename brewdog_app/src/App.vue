@@ -18,8 +18,8 @@ export default {
     return {
       beers: [],
       selectedBeer : null,
-      // favourites []
-      // beerToSave = null
+      favourites :[],
+      beerToSave : null
     }
 
   },
@@ -31,10 +31,13 @@ export default {
     eventBus.$on('beer-selected', (beer) => {
       this.selectedBeer = beer
     })
+
+    eventBus.$on('beer-to-save', (beer) => {
+      this.favourites.push(beer)
+    })
   },
   methods: {
-
-    // save beer function 
+    
 },
   components: {
     'beers-list': BeersList,
