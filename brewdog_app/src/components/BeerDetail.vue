@@ -1,6 +1,9 @@
 <template>
     <div v-if="beer">
         <p>{{beer.tagline}}</p>
+        <li>
+        {{ beer.ingredients }}
+        </li>
         <button v-on:click = 'saveBeer' > Add to Favourites </button>
     </div>
 </template>
