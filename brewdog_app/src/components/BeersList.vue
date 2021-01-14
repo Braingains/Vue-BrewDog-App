@@ -13,6 +13,7 @@ import BeersListItem from './BeerListItem.vue';
 export default {
     name: 'beers-list',
     props: ['beers'],
+    
 
     components: {
         'beer-list-item' : BeersListItem
