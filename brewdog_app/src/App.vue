@@ -2,20 +2,24 @@
     <div class="main-container">
       <beers-list :beers='beers'> </beers-list>
       <beer-detail :beer='selectedBeer'> </beer-detail>
+      <favourite-beers :beer='favourites'> </favourite-beers>
     </div>
 </template>
 
 <script>
 import { eventBus } from './main.js'
 import BeersList from './components/BeersList.vue'
-import BeerDetail from './components/BeerDetail.vue';
+import BeerDetail from './components/BeerDetail.vue'
+import FavouriteBeers from './components/FavouriteBeers.vue';
 
 export default {
   name: 'app',
   data (){
     return {
       beers: [],
-      selectedBeer : null
+      selectedBeer : null,
+      // favourites []
+      // beerToSave = null
     }
 
   },
@@ -28,9 +32,15 @@ export default {
       this.selectedBeer = beer
     })
   },
+  methods: {
+
+    // save beer function 
+},
   components: {
     'beers-list': BeersList,
-    'beer-detail': BeerDetail
+    'beer-detail': BeerDetail,
+    'favourite-beers': FavouriteBeers
+    
   }
 
 }
